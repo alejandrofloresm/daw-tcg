@@ -27,6 +27,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Nombre</th>
+                                    <th>Color</th>
                                     <th>Creado</th>
                                     <th># Cartas</th>
                                 </tr>
@@ -36,6 +37,11 @@
                             <tr>
                                 <td>{{ $category->id }}</td>
                                 <td>{{ $category->name }}</td>
+                                <td>
+                                    <span style="color: {{ $category->hex_color }}">
+                                        {{ $category->hex_color }}
+                                    </span>
+                                </td>
                                 <td>{{ $category->created_at }}</td>
                                 <td>{{ $category->cards->count() }}</td>
                             </tr>

@@ -40,7 +40,11 @@
                                 <td>{{ $card->name }}</td>
                                 <td>{{ $card->attack }}</td>
                                 <td>{{ $card->defense }}</td>
-                                <td>{{ $card->category->name }}</td>
+                                <td>
+                                    <span style="color:{{ $card->category->hex_color }}">
+                                        {{ $card->category->name }}
+                                    </span>
+                                </td>
                                 <td>{{ $card->created_at }}</td>
                             </tr>
                             @endforeach
