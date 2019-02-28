@@ -13,4 +13,8 @@ class Deck extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function cards() {
+        return $this->belongsToMany('App\Models\Card');
+    }
 }

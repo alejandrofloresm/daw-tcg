@@ -31,4 +31,10 @@ class DeckController extends BaseController
         Deck::create($validatedData['deck']);
         return redirect()->route('admin.decks.index');
     }
+
+    public function show(Request $req, Deck $deck) {
+        $data = [];
+        $data['deck'] = $deck;
+        return view('admin.decks.show', ['data' => $data]);
+    }
 }

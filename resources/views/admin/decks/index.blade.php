@@ -28,6 +28,7 @@
                                     <th>Id</th>
                                     <th>Nombre</th>
                                     <th>Creado el</th>
+                                    <th>Accioness</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,6 +37,20 @@
                                 <td>{{ $deck->id }}</td>
                                 <td>{{ $deck->name }}</td>
                                 <td>{{ $deck->created_at }}</td>
+                                <td>
+                                    <a
+                                        href="{{ route('admin.decks.show', ['deck' => $deck]) }}"
+                                        class="btn btn-sm btn-default">
+                                        <i class="fa fa-eye"></i>
+                                        Ver deck
+                                    </a>
+                                    <a
+                                        href="{{ route('admin.decks.cards.create', ['deck' => $deck]) }}"
+                                        class="btn btn-sm btn-success">
+                                        <i class="fa fa-cubes"></i>
+                                        Agregar cartas
+                                    </a>
+                                </td>
                             </tr>
                             @endforeach
                             </tbody>

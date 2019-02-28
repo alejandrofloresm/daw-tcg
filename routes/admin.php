@@ -18,3 +18,7 @@ Route::post('categories', 'CategoryController@store')->name('categories.store');
 Route::get('decks', 'DeckController@index')->name('decks.index');
 Route::get('decks/create', 'DeckController@create')->name('decks.create');
 Route::post('decks', 'DeckController@store')->name('decks.store');
+Route::get('decks/{deck}', 'DeckController@show')->name('decks.show');
+
+Route::get('decks/{deck}/cards/create', 'DeckCardController@create')->name('decks.cards.create');
+Route::post('decks/{deck}/cards', 'DeckCardController@store')->name('decks.cards.store');
