@@ -68,6 +68,11 @@
                         <span>Categorías</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('admin.decks.index') }}">
+                        <span>Decks</span>
+                    </a>
+                </li>
             </ul>
             <!-- /.sidebar-menu -->
             </section>
