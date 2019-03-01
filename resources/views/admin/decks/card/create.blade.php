@@ -36,12 +36,12 @@
                 <div class="box">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>Targeta a agregar</label>
+                            <label>Tarjeta a agregar</label>
                             <select name="card_deck[card_id]" class="form-control">
-                            <option value="">Selecciona una tarjeta</option>
-                            @foreach ($data['cards'] as $card)
-                                <option value="{{ $card->id }}">{{ $card->name }}</option>
-                            @endforeach
+                                <option value="">Selecciona una tarjeta</option>
+                                @foreach ($data['cards'] as $card)
+                                    <option value="{{ $card->id }}">{{ $card->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
