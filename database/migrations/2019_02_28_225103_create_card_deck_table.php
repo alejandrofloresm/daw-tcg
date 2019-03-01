@@ -24,7 +24,7 @@ class CreateCardDeckTable extends Migration
                 ->onDelete('cascade');
             $table->foreign('deck_id')
                 ->references('id')
-                ->on('cards')
+                ->on('decks')
                 ->onDelete('cascade');
         });
     }
