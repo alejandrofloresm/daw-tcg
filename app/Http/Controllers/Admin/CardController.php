@@ -9,7 +9,7 @@ use App\Models\Category;
 
 class CardController extends BaseController
 {
-    public function index(Request $req) {
+    public function index(Request $req, $order = null) {
         // 1. Cartas donde el ataque sea mayor que 10
         // $cards = Card::where('attack', '>', 45)->get();
         // 2. Cartas donde el ataque sea mayor que 45 y defensa mayor que 35
@@ -71,7 +71,12 @@ class CardController extends BaseController
         $params['attack'] = 45;
         $cards = Card::fromQuery($query, $params);
         */
-        $cards = Card::all();
+        if ($order) {
+            $cards = Card::where('id', '!=', 'null')->orderBy('attack', $order)->get();
+        } else {
+            $cards = Card::where('id', '!=', 'null')->get();
+        }
+
 
         // Operaciones de sumas, promedio, etcétera
         $data = [];

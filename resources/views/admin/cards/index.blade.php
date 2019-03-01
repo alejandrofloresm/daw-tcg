@@ -18,6 +18,16 @@
                         <a class="btn btn-info btn-sm" href="{{ route('admin.cards.create') }}">
                             Crear nueva carta
                         </a>
+                        <a
+                            class="btn btn-success btn-sm"
+                            href="{{ route('admin.cards.index', ['order' => 'desc']) }}">
+                            Ordenar de forma descendente (ataque)
+                        </a>
+                        <a
+                            class="btn btn-error btn-sm"
+                            href="{{ route('admin.cards.index', ['order' => 'asc']) }}">
+                            Ordenar de forma ascendente (ataque)
+                        </a>
                     </div>
                 </div>
                 <div class="box-body">

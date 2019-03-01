@@ -7,7 +7,7 @@
 */
 
 Route::get('/', 'DashboardController@index')->name('dashboard.index');
-Route::get('cards', 'CardController@index')->name('cards.index');
+Route::get('cards/{order?}', 'CardController@index')->name('cards.index');
 Route::get('cards/create', 'CardController@create')->name('cards.create');
 Route::post('cards', 'CardController@store')->name('cards.store');
 
