@@ -20,4 +20,10 @@ class CardsController extends BaseController
     public function show(Request $req, Card $card) {
         return new CardResource($card);
     }
+
+    public function store(Request $req) {
+        $cardData = $req->input('card');
+        $card = Card::create($cardData);
+        return new CardResource($card);
+    }
 }
