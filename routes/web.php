@@ -14,3 +14,5 @@
 Route::get('/', 'CardController@index')->name('homepage');
 
 Route::get('reports', 'ReportCardController@index')->name('reports.index');
+
+Route::get('cards/{card}/purchase', 'CardsPurchaseController@index')->name('cards.purchase.index');
