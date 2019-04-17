@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'CardController@index')->name('homepage');
+
+Route::get('reports', 'ReportCardController@index')->name('reports.index');

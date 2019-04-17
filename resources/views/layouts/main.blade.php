@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +7,7 @@
     <title>TCG</title>
     <!-- Bulma Version 0.7.4-->
     <link rel="stylesheet" href="{{ asset('css/bulma.min.css') }}" />
+    @stack('layout_end_head')
 </head>
 <body>
     <!-- START NAV -->
@@ -34,10 +34,11 @@
     <!-- END NAV -->
     <div class="container">
         <div class="columns">
-            <div class="column is-12">
+            <div class="column is-12" style="margin-top:15px;">
                 @yield('content')
             </div>
         </div>
     </div>
+    @stack('layout_end_body')
 </body>
 </html>
