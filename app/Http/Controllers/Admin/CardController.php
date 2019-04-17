@@ -77,7 +77,6 @@ class CardController extends BaseController
             $cards = Card::where('id', '!=', 'null')->get();
         }
 
-
         // Operaciones de sumas, promedio, etcétera
         $data = [];
         $data['cards'] = $cards;
